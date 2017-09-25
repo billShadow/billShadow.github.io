@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -95,20 +95,18 @@
 
 
 
-<meta name="description" content="CGICGI是干嘛使得的？场景：如果一个http请求发送给nginx服务器，nginx服务器在接受到这个请求之后，知道这个请求是一个动态的请求，那么这个请求就需要php来解析，动态的请求需要传入一些信息进来，这些信息是有对应的格式的，而CGI就是来规范这些格式的协议。所以CGI就是一个协议，和进程没有关系！！！CGI是为了保证web server传递过来的数据是标准格式，它是一个协议。 FastC">
-<meta name="keywords" content="Linux">
+<meta name="description" content="用户相关配置：git config --list --global    //查询用户信息git config --global user.name xiaobin    //设置用户名，就是提交code的时候显示是谁提交的git config --global user.email bill_xiaobin@163.com    // 设置邮箱git config --global --add">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CGI,FastCGI,php-fpm">
-<meta property="og:url" content="http://yoursite.com/2017/09/19/CGI-FastCGI-php-fpm/index.html">
+<meta property="og:title" content="git使用笔记">
+<meta property="og:url" content="http://yoursite.com/2017/09/25/git使用笔记/index.html">
 <meta property="og:site_name" content="Bill&#39;s Blog">
-<meta property="og:description" content="CGICGI是干嘛使得的？场景：如果一个http请求发送给nginx服务器，nginx服务器在接受到这个请求之后，知道这个请求是一个动态的请求，那么这个请求就需要php来解析，动态的请求需要传入一些信息进来，这些信息是有对应的格式的，而CGI就是来规范这些格式的协议。所以CGI就是一个协议，和进程没有关系！！！CGI是为了保证web server传递过来的数据是标准格式，它是一个协议。 FastC">
+<meta property="og:description" content="用户相关配置：git config --list --global    //查询用户信息git config --global user.name xiaobin    //设置用户名，就是提交code的时候显示是谁提交的git config --global user.email bill_xiaobin@163.com    // 设置邮箱git config --global --add">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/web_request.png">
-<meta property="og:updated_time" content="2017-09-19T15:57:43.760Z">
+<meta property="og:updated_time" content="2017-09-25T13:03:43.182Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CGI,FastCGI,php-fpm">
-<meta name="twitter:description" content="CGICGI是干嘛使得的？场景：如果一个http请求发送给nginx服务器，nginx服务器在接受到这个请求之后，知道这个请求是一个动态的请求，那么这个请求就需要php来解析，动态的请求需要传入一些信息进来，这些信息是有对应的格式的，而CGI就是来规范这些格式的协议。所以CGI就是一个协议，和进程没有关系！！！CGI是为了保证web server传递过来的数据是标准格式，它是一个协议。 FastC">
-<meta name="twitter:image" content="http://ocs2ic4ow.bkt.clouddn.com/web_request.png">
+<meta name="twitter:title" content="git使用笔记">
+<meta name="twitter:description" content="用户相关配置：git config --list --global    //查询用户信息git config --global user.name xiaobin    //设置用户名，就是提交code的时候显示是谁提交的git config --global user.email bill_xiaobin@163.com    // 设置邮箱git config --global --add">
 
 
 
@@ -138,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/19/CGI-FastCGI-php-fpm/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/25/git使用笔记/"/>
 
 
 
 
 
-  <title>CGI,FastCGI,php-fpm | Bill's Blog</title>
+  <title>git使用笔记 | Bill's Blog</title>
   
 
 
@@ -271,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/CGI-FastCGI-php-fpm/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/git使用笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bill">
@@ -288,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CGI,FastCGI,php-fpm</h1>
+          <h1 class="post-title" itemprop="name headline">git使用笔记</h1>
         
 
         <div class="post-meta">
@@ -300,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T21:48:48+08:00">
-                2017-09-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T21:00:23+08:00">
+                2017-09-25
               </time>
             
 
@@ -310,6 +308,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -343,11 +363,29 @@
       
 
       
-        <h2 id="CGI"><a href="#CGI" class="headerlink" title="CGI"></a>CGI</h2><p><code>CGI</code>是干嘛使得的？<br>场景：如果一个http请求发送给nginx服务器，nginx服务器在接受到这个请求之后，知道这个请求是一个动态的请求，那么这个请求就需要php来解析，动态的请求需要传入一些信息进来，这些信息是有对应的格式的，而CGI就是来规范这些格式的协议。<br>所以CGI就是一个协议，和进程没有关系！！！<br>CGI是为了保证web server传递过来的数据是标准格式，它是一个协议。</p>
-<h2 id="FastCGI"><a href="#FastCGI" class="headerlink" title="FastCGI"></a>FastCGI</h2><p>那么<code>FastCGI</code>又是什么东东呢？<br>FastCGI是CGI的升级版，也是一种协议。<br>FastCGI的特点是会在一个进程中依次完成多个请求，以达到高效的目的，大多数的FastCGI实现都会维护一个进程池。</p>
-<h2 id="php-fpm"><a href="#php-fpm" class="headerlink" title="php-fpm"></a>php-fpm</h2><p><code>php-fpm</code>管理的是php_cgi，而不是管理的FastCGI协议，php-fpm实现了FastCGI协议的程序，用来管理FastCGI调起的进程。</p>
-<h2 id="php-CGI"><a href="#php-CGI" class="headerlink" title="php_CGI"></a>php_CGI</h2><p>只是解析php脚本的程序，就是PHP的解析器。</p>
-<p>那么一次实际的web请求流程是怎么样的呢？<br><img src="http://ocs2ic4ow.bkt.clouddn.com/web_request.png" alt="big img"></p>
+        <h3 id="用户相关配置："><a href="#用户相关配置：" class="headerlink" title="用户相关配置："></a>用户相关配置：</h3><p><code>git config --list --global</code>    //查询用户信息<br><code>git config --global user.name xiaobin</code>    //设置用户名，就是提交code的时候显示是谁提交的<br><code>git config --global user.email bill_xiaobin@163.com</code>    // 设置邮箱<br><code>git config --global --add user.name bill</code>    // 添加用户</p>
+<h3 id="git取别名"><a href="#git取别名" class="headerlink" title="git取别名"></a>git取别名</h3><p><code>git config --global alias.co checkout</code>    // 取别名co<br><code>git config --global alias.ci commit</code>    //取别名ci</p>
+<h3 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h3><p><code>git clone username@host://github.XXX</code> &lt;克隆出来之后的文件名&gt;<br><code>git add &lt;filename&gt;/*</code>    // 提交单个或者多个文件，*提交所有文件到暂存区<br><code>git commit -m &quot;提交说明&quot;</code>   // 提交修改的文件<br><code>git push origin master</code>    // 提交到远程master分支上面</p>
+<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><p><code>git branch test</code>    // 创建test分支，并切换过去<br><code>git checkout -b develop origin master</code>     // 以远程master为主线创建分支</p>
+<p><code>git checkout develop</code>    // 切换分支<br><code>git branch -a</code>     // 显示所有分支</p>
+<h4 id="合并操作"><a href="#合并操作" class="headerlink" title="合并操作"></a>合并操作</h4><p><code>git merge --no-ff develop</code>   // 切换到master分支之后先pull下，然后合并开发分支即可push到远程</p>
+<h4 id="回退版本"><a href="#回退版本" class="headerlink" title="回退版本"></a>回退版本</h4><p><code>git reset --hard commit_Id</code>   // 回滚到指定的提交点</p>
+<p>如何查看commit_id<br><code>git log</code>   // 查询提交记录</p>
+<h4 id="如果有冲突如何处理："><a href="#如果有冲突如何处理：" class="headerlink" title="如果有冲突如何处理："></a>如果有冲突如何处理：</h4><p>可以先贮藏，然后显示出来<br><code>git stash</code>    // 贮藏操作，将之前修改的文件隐藏起来<br><code>git stash apply</code>    // 拉取成功之后，将贮藏的又显示回来</p>
+<p>如何丢弃本地修改：<br><code>git checkout filename</code>     // 丢弃本地的修改，在为commit和add的情况下</p>
+<h3 id="标签-tag"><a href="#标签-tag" class="headerlink" title="标签  tag"></a>标签  <code>tag</code></h3><p>发布一个版本时，我们通常需要在版本库中打一个标签。这样更加更加利于回滚<br><code>gut tag</code>    // 查看所有标签<br><code>git tag &lt;name&gt;</code>    // 用于创建一个标签，默认是HEAD,也可以指定commit_id</p>
+<p>指定特定的标签信息<br><code>git tag -a &lt;tagname&gt; -m &quot;标签说明&quot;</code></p>
+<p>查看指定标签的详细信息<br><code>git show &lt;tagname&gt;</code></p>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>删除本地分支<br><code>git branch -d bugs</code>    // 删除本地bugs分支</p>
+<p>删除远程分支<br><code>git branch -rd origin/bugs</code>  // 删除远程bugs分支</p>
+<h3 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h3><p>有时候我们必须把文件放到Git工作目录中，但是不能提交他们，比如配置文件等等。每次<code>git status</code>都会显示，这个时候Git为我们提供这个这么一个文件<code>.gitignore</code>文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。</p>
+<p>忽略的原则：</p>
+<ul>
+<li>忽略操作系统自动生成的文件，比如缩略图，比如ide自动生成的文件.idea等；</li>
+<li>忽略编译生成的中间文件、可执行文件等。</li>
+<li>忽略自己的带有敏感信息的配置文件，比如存放的配置文件等。</li>
+</ul>
+<p>下面是实际的laravel项目中Git的忽略文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/node_modules</div><div class="line">/public/users*</div><div class="line">/storage/*.key</div><div class="line">/vendor</div><div class="line">/.env</div><div class="line">/composer.lock</div><div class="line">/.DS_Store*</div><div class="line">/.idea</div><div class="line">public/.htaccess</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -394,7 +432,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -407,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/18/Linux-查找/" rel="next" title="Linux查询">
-                <i class="fa fa-chevron-left"></i> Linux查询
+              <a href="/2017/09/24/关系型数据库和非关系型数据库的区别/" rel="next" title="关系型数据库和非关系型数据库的区别">
+                <i class="fa fa-chevron-left"></i> 关系型数据库和非关系型数据库的区别
               </a>
             
           </div>
@@ -416,10 +454,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/22/arraysort/" rel="prev" title="多维数组排序">
-                多维数组排序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -582,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CGI"><span class="nav-number">1.</span> <span class="nav-text">CGI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FastCGI"><span class="nav-number">2.</span> <span class="nav-text">FastCGI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php-fpm"><span class="nav-number">3.</span> <span class="nav-text">php-fpm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php-CGI"><span class="nav-number">4.</span> <span class="nav-text">php_CGI</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户相关配置："><span class="nav-number">1.</span> <span class="nav-text">用户相关配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git取别名"><span class="nav-number">2.</span> <span class="nav-text">git取别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础操作"><span class="nav-number">3.</span> <span class="nav-text">基础操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建分支"><span class="nav-number">3.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并操作"><span class="nav-number">3.2.</span> <span class="nav-text">合并操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回退版本"><span class="nav-number">3.3.</span> <span class="nav-text">回退版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果有冲突如何处理："><span class="nav-number">3.4.</span> <span class="nav-text">如果有冲突如何处理：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签-tag"><span class="nav-number">4.</span> <span class="nav-text">标签  tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除分支"><span class="nav-number">5.</span> <span class="nav-text">删除分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略特殊文件"><span class="nav-number">6.</span> <span class="nav-text">忽略特殊文件</span></a></li></ol></div>
             
 
           </div>

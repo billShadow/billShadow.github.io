@@ -95,15 +95,18 @@
 
 
 
+<meta name="description" content="第一种：array_multisort123456789&amp;lt;?php $array[] = array(&amp;apos;id&amp;apos;=&amp;gt;1,&amp;apos;price&amp;apos;=&amp;gt;50,&amp;apos;a&amp;apos;=&amp;gt;150);$array[] = array(&amp;apos;id&amp;apos;=&amp;gt;2,&amp;apos;price&amp;apos;=&amp;gt;50,&amp;apos;a&amp;apos;=">
 <meta name="keywords" content="php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多维数组排序">
 <meta property="og:url" content="http://yoursite.com/2017/09/22/arraysort/index.html">
 <meta property="og:site_name" content="Bill&#39;s Blog">
+<meta property="og:description" content="第一种：array_multisort123456789&amp;lt;?php $array[] = array(&amp;apos;id&amp;apos;=&amp;gt;1,&amp;apos;price&amp;apos;=&amp;gt;50,&amp;apos;a&amp;apos;=&amp;gt;150);$array[] = array(&amp;apos;id&amp;apos;=&amp;gt;2,&amp;apos;price&amp;apos;=&amp;gt;50,&amp;apos;a&amp;apos;=">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-22T14:26:07.540Z">
+<meta property="og:updated_time" content="2017-09-25T13:00:52.003Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多维数组排序">
+<meta name="twitter:description" content="第一种：array_multisort123456789&amp;lt;?php $array[] = array(&amp;apos;id&amp;apos;=&amp;gt;1,&amp;apos;price&amp;apos;=&amp;gt;50,&amp;apos;a&amp;apos;=&amp;gt;150);$array[] = array(&amp;apos;id&amp;apos;=&amp;gt;2,&amp;apos;price&amp;apos;=&amp;gt;50,&amp;apos;a&amp;apos;=">
 
 
 
@@ -360,7 +363,11 @@
       
 
       
-        
+        <h3 id="第一种：array-multisort"><a href="#第一种：array-multisort" class="headerlink" title="第一种：array_multisort"></a>第一种：<code>array_multisort</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?php </div><div class="line">$array[] = array(&apos;id&apos;=&gt;1,&apos;price&apos;=&gt;50,&apos;a&apos;=&gt;150);</div><div class="line">$array[] = array(&apos;id&apos;=&gt;2,&apos;price&apos;=&gt;50,&apos;a&apos;=&gt;250);</div><div class="line">$array[] = array(&apos;id&apos;=&gt;3,&apos;price&apos;=&gt;30,&apos;a&apos;=&gt;3300);</div><div class="line">$array[] = array(&apos;id&apos;=&gt;4,&apos;price&apos;=&gt;20,&apos;a&apos;=&gt;420);</div><div class="line">foreach ($array as $key=&gt;$value)&#123;</div><div class="line">    $id[$key] = $value[&apos;id&apos;];</div><div class="line">    $price[$key] = $value[&apos;price&apos;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>//先以价格price排序，之后以id排序<br>array_multisort($price,SORT_NUMERIC,SORT_DESC,$id,SORT_STRING,SORT_DESC,$array);<br>利用array_multisort函数对数组排序，</p>
+<h3 id="第二种：usort-用户自定义比较函数"><a href="#第二种：usort-用户自定义比较函数" class="headerlink" title="第二种：usort 用户自定义比较函数"></a>第二种：<code>usort</code> 用户自定义比较函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$array=[[&apos;id&apos;=&gt;1, &apos;price&apos;=&gt;8],[&apos;id&apos;=&gt;4, &apos;price&apos;=&gt;9], [&apos;id&apos;=&gt;5, &apos;price&apos;=&gt;3]];</div><div class="line">usort($array, function($a, $b) &#123; </div><div class="line">            $al = $a[&apos;price&apos;]; </div><div class="line">            $bl = $b[&apos;price&apos;]; </div><div class="line">            if ($al == $bl)&#123;</div><div class="line">                return 0;</div><div class="line">            &#125; else&#123;</div><div class="line">                return ($al &gt; $bl) ? -1 : 1; </div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">print_r($array);</div></pre></td></tr></table></figure>
+<h3 id="第三种：利用ksort，krsort函数"><a href="#第三种：利用ksort，krsort函数" class="headerlink" title="第三种：利用ksort，krsort函数"></a>第三种：利用<code>ksort</code>，<code>krsort</code>函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;?php </div><div class="line">$array[] = array(&apos;id&apos;=&gt;1,&apos;price&apos;=&gt;50);</div><div class="line">$array[] = array(&apos;id&apos;=&gt;3,&apos;price&apos;=&gt;308);</div><div class="line">$array[] = array(&apos;id&apos;=&gt;4,&apos;price&apos;=&gt;20);</div><div class="line"></div><div class="line">function array_sort($array,$row,$type)&#123;</div><div class="line">  $array_temp = array();</div><div class="line">  foreach($array as $v)&#123;</div><div class="line">    $array_temp[$v[$row]] = $v;</div><div class="line">  &#125;</div><div class="line">  if($type == &apos;asc&apos;)&#123;</div><div class="line">    ksort($array_temp);</div><div class="line">  &#125;elseif($type=&apos;desc&apos;)&#123;</div><div class="line">    krsort($array_temp);</div><div class="line">  &#125;else&#123;</div><div class="line">  &#125;</div><div class="line">  return $array_temp;</div><div class="line">&#125;</div><div class="line">var_dump(array_sort($array, &apos;price&apos;, &apos;asc&apos;));</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -380,14 +387,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/1.png" alt="Bill 微信支付"/>
+        <img id="wechat_qr" src="http://ocs2ic4ow.bkt.clouddn.com/wechat_pay.png" alt="Bill 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/1.png" alt="Bill 支付宝"/>
+        <img id="alipay_qr" src="http://ocs2ic4ow.bkt.clouddn.com/ali_pay.png" alt="Bill 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -483,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -502,7 +518,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -513,7 +529,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -524,7 +540,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -575,6 +591,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种：array-multisort"><span class="nav-number">1.</span> <span class="nav-text">第一种：array_multisort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种：usort-用户自定义比较函数"><span class="nav-number">2.</span> <span class="nav-text">第二种：usort 用户自定义比较函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三种：利用ksort，krsort函数"><span class="nav-number">3.</span> <span class="nav-text">第三种：利用ksort，krsort函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
