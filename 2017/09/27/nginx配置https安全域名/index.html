@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MySQL,NoSQL," />
+  <meta name="keywords" content="Linux,nginx," />
 
 
 
@@ -95,18 +95,23 @@
 
 
 
-<meta name="description" content="1.关系型数据库关系型数据库说的就是通过关系模型来组织数据的数据库，而这个关系模型就是我们通常说的表。关系型数据库最大的特点就是事物的一致性。 数据库事务必须具备ACID特性，ACID是Atomic原子性，Consistency一致性，Isolation隔离性，Durability持久性。 关系型数据库库的优点：  容易理解：表结构是非常贴近我们现实逻辑的。 使用方便：通过使用SQL语言我们能方便">
-<meta name="keywords" content="MySQL,NoSQL">
+<meta name="description" content="第一步：首先拿到域名的SSL证书，如何拿到SSL证书？可通过腾讯云或者阿里云都能免费申请域名证书。通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。 下面以阿里云为案例获取域名SSL证书： 1.如何通过阿里云申请？详细如下图：在CA证书服务栏目中点击立即购买即可： 2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图： 3.补充好信息之后，提交审">
+<meta name="keywords" content="Linux,nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关系型数据库和非关系型数据库的区别">
-<meta property="og:url" content="http://yoursite.com/2017/09/24/关系型数据库和非关系型数据库的区别/index.html">
+<meta property="og:title" content="nginx配置https安全域名">
+<meta property="og:url" content="http://yoursite.com/2017/09/27/nginx配置https安全域名/index.html">
 <meta property="og:site_name" content="Bill&#39;s Blog">
-<meta property="og:description" content="1.关系型数据库关系型数据库说的就是通过关系模型来组织数据的数据库，而这个关系模型就是我们通常说的表。关系型数据库最大的特点就是事物的一致性。 数据库事务必须具备ACID特性，ACID是Atomic原子性，Consistency一致性，Isolation隔离性，Durability持久性。 关系型数据库库的优点：  容易理解：表结构是非常贴近我们现实逻辑的。 使用方便：通过使用SQL语言我们能方便">
+<meta property="og:description" content="第一步：首先拿到域名的SSL证书，如何拿到SSL证书？可通过腾讯云或者阿里云都能免费申请域名证书。通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。 下面以阿里云为案例获取域名SSL证书： 1.如何通过阿里云申请？详细如下图：在CA证书服务栏目中点击立即购买即可： 2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图： 3.补充好信息之后，提交审">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-26T13:31:28.119Z">
+<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https01.png">
+<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https02.png">
+<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https03.png">
+<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https04.png">
+<meta property="og:updated_time" content="2017-09-27T14:20:53.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关系型数据库和非关系型数据库的区别">
-<meta name="twitter:description" content="1.关系型数据库关系型数据库说的就是通过关系模型来组织数据的数据库，而这个关系模型就是我们通常说的表。关系型数据库最大的特点就是事物的一致性。 数据库事务必须具备ACID特性，ACID是Atomic原子性，Consistency一致性，Isolation隔离性，Durability持久性。 关系型数据库库的优点：  容易理解：表结构是非常贴近我们现实逻辑的。 使用方便：通过使用SQL语言我们能方便">
+<meta name="twitter:title" content="nginx配置https安全域名">
+<meta name="twitter:description" content="第一步：首先拿到域名的SSL证书，如何拿到SSL证书？可通过腾讯云或者阿里云都能免费申请域名证书。通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。 下面以阿里云为案例获取域名SSL证书： 1.如何通过阿里云申请？详细如下图：在CA证书服务栏目中点击立即购买即可： 2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图： 3.补充好信息之后，提交审">
+<meta name="twitter:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https01.png">
 
 
 
@@ -136,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/24/关系型数据库和非关系型数据库的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/27/nginx配置https安全域名/"/>
 
 
 
 
 
-  <title>关系型数据库和非关系型数据库的区别 | Bill's Blog</title>
+  <title>nginx配置https安全域名 | Bill's Blog</title>
   
 
 
@@ -279,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/24/关系型数据库和非关系型数据库的区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/27/nginx配置https安全域名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bill">
@@ -296,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关系型数据库和非关系型数据库的区别</h1>
+          <h1 class="post-title" itemprop="name headline">nginx配置https安全域名</h1>
         
 
         <div class="post-meta">
@@ -308,8 +313,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-24T22:22:42+08:00">
-                2017-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-27T21:39:46+08:00">
+                2017-09-27
               </time>
             
 
@@ -331,8 +336,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/服务器/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器</span>
                   </a>
                 </span>
 
@@ -373,27 +378,15 @@
       
 
       
-        <h3 id="1-关系型数据库"><a href="#1-关系型数据库" class="headerlink" title="1.关系型数据库"></a>1.关系型数据库</h3><p>关系型数据库说的就是通过关系模型来组织数据的数据库，而这个关系模型就是我们通常说的表。<br>关系型数据库最大的特点就是事物的一致性。</p>
-<p>数据库事务必须具备ACID特性，ACID是Atomic原子性，Consistency一致性，Isolation隔离性，Durability持久性。</p>
-<p>关系型数据库库的优点：</p>
-<ul>
-<li>容易理解：表结构是非常贴近我们现实逻辑的。</li>
-<li>使用方便：通过使用SQL语言我们能方便的操作数据。</li>
-<li>易于维护：丰富的完整性大大减低了数据冗余和数据不一致的概率。</li>
-</ul>
-<p>关系型数据库的瓶颈：</p>
-<ul>
-<li>高并发读写需求：如果网站的用户并发非常高，请求每秒上万次读写请求，对于关系型数据库来说，磁盘的I/O是一个很大的瓶颈。</li>
-<li>海量数据的高效读写：网站每天产生的数据量是巨大的，对于关系性数据库来说，在一张海量数据的表中查询，效率是非常低的。</li>
-<li>高扩展性和可用性：在web应用系统中，随着用户量和访问量的增加，数据库无法想web server那样轻松的通过添加更多的硬件和服务器节点来扩展性能和负载能力。</li>
-</ul>
-<h3 id="2-非关系型数据库"><a href="#2-非关系型数据库" class="headerlink" title="2.非关系型数据库"></a>2.非关系型数据库</h3><p>首先菲关系型数据库严格上不是一种数据库，而可以理解为一种数据结构化存储方法的集合。</p>
-<p>非关系型数据库的优点：</p>
-<ul>
-<li>高效读写：NoSQL是基于键值对的，不需要经过SQL层的解析，性能非常高。</li>
-<li>可扩展性：由于数据之间没有耦合，所以非常容易水平扩展。</li>
-</ul>
-<p>现实举例：<br>关系型数据库为了维护一致性所付出的巨大代价就是其读写性能比较差，而像微博，facebook这类SNS的应用，对于并发要求极高，关系型数据库已经无法应付，所以需要nosql这种新的数据结构存储来代替关系型数据库。<br>不过像银行系统这个对数据一致性要求极高的，还是得用关系型数据库。</p>
+        <h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p>首先拿到域名的SSL证书，<br>如何拿到SSL证书？<br>可通过腾讯云或者阿里云都能免费申请域名证书。<br>通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。</p>
+<p>下面以阿里云为案例获取域名SSL证书：</p>
+<h4 id="1-如何通过阿里云申请？详细如下图："><a href="#1-如何通过阿里云申请？详细如下图：" class="headerlink" title="1.如何通过阿里云申请？详细如下图："></a>1.如何通过阿里云申请？详细如下图：</h4><p>在CA证书服务栏目中点击立即购买即可：<br><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https01.png" alt="big img"></p>
+<h4 id="2-点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图："><a href="#2-点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图：" class="headerlink" title="2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图："></a>2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图：</h4><p><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https02.png" alt="big img"></p>
+<h4 id="3-补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据："><a href="#3-补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据：" class="headerlink" title="3.补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据："></a>3.补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据：</h4><p><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https03.png" alt="big img"></p>
+<h4 id="4-通过域名提供商，给域名添加一条DNS解析记录即可："><a href="#4-通过域名提供商，给域名添加一条DNS解析记录即可：" class="headerlink" title="4.通过域名提供商，给域名添加一条DNS解析记录即可："></a>4.通过域名提供商，给域名添加一条DNS解析记录即可：</h4><p><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https04.png" alt="big img"></p>
+<h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p>修改nginx配置文件。<br>正常的http 80端口的访问：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen  80;</div><div class="line">    server_name  m.dev.osv.cn;</div><div class="line">    return 301 https://m.dev.osv.cn$request_uri; #将原http直接跳转到https</div><div class="line">    index index.php index.html index.htm;</div><div class="line">    root /data/osv/src/osv-h5/public;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>https 443端口的https访问：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen  443;</div><div class="line">    server_name  m.dev.osv.cn;</div><div class="line">    index index.php index.html index.htm;</div><div class="line">    root /data/osv/src/osv-h5/public;</div><div class="line">    ssl on;</div><div class="line">    ssl_certificate /data/certs/m.dev.osv.cn/1_m.dev.osv.cn_bundle.crt;</div><div class="line">    ssl_certificate_key /data/certs/m.dev.osv.cn/2_m.dev.osv.cn.key;</div><div class="line">    ssl_session_timeout 5m;</div><div class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</div><div class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</div><div class="line">    ssl_prefer_server_ciphers on;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h3><p>配置好nginx站点配置文件之后，./nginx -t检测一下配置文件正确性。<br>之后重启nginx即可生效。</p>
 
       
     </div>
@@ -440,9 +433,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
-            <a href="/tags/NoSQL/" rel="tag"># NoSQL</a>
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
           
         </div>
       
@@ -455,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/22/arraysort/" rel="next" title="多维数组排序">
-                <i class="fa fa-chevron-left"></i> 多维数组排序
+              <a href="/2017/09/26/nginx日志统计分析/" rel="next" title="nginx日志统计分析">
+                <i class="fa fa-chevron-left"></i> nginx日志统计分析
               </a>
             
           </div>
@@ -464,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/25/git使用笔记/" rel="prev" title="git使用笔记">
-                git使用笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -630,7 +619,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">1.关系型数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-非关系型数据库"><span class="nav-number">2.</span> <span class="nav-text">2.非关系型数据库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步："><span class="nav-number">1.</span> <span class="nav-text">第一步：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如何通过阿里云申请？详细如下图："><span class="nav-number">1.1.</span> <span class="nav-text">1.如何通过阿里云申请？详细如下图：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图："><span class="nav-number">1.2.</span> <span class="nav-text">2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据："><span class="nav-number">1.3.</span> <span class="nav-text">3.补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-通过域名提供商，给域名添加一条DNS解析记录即可："><span class="nav-number">1.4.</span> <span class="nav-text">4.通过域名提供商，给域名添加一条DNS解析记录即可：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步："><span class="nav-number">2.</span> <span class="nav-text">第二步：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步："><span class="nav-number">3.</span> <span class="nav-text">第三步：</span></a></li></ol></div>
             
 
           </div>
