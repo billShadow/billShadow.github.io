@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux,Nginx," />
+  <meta name="keywords" content="JavaScript,PHP,Nginx," />
 
 
 
@@ -95,23 +95,18 @@
 
 
 
-<meta name="description" content="第一步：首先拿到域名的SSL证书，如何拿到SSL证书？可通过腾讯云或者阿里云都能免费申请域名证书。通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。 下面以阿里云为案例获取域名SSL证书： 1.如何通过阿里云申请？详细如下图：在CA证书服务栏目中点击立即购买即可： 2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图： 3.补充好信息之后，提交审">
-<meta name="keywords" content="Linux,Nginx">
+<meta name="description" content="什么是跨域跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对javascript施加的安全限制。 为什么需要跨域受到浏览器同源策略影响：同源策略阻止从一个域上加载的脚本获取或操作另一个域上的文档属性。也就是说，受到请求的 URL 的域必须与当前 Web 页面的域相同。这意味着浏览器隔离来自不同源的内容，以防止它们之间的操作。这个浏览器策略很旧，从 Netscape">
+<meta name="keywords" content="JavaScript,PHP,Nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx配置https安全域名">
-<meta property="og:url" content="http://yoursite.com/2017/09/27/nginx配置https安全域名/index.html">
+<meta property="og:title" content="跨域">
+<meta property="og:url" content="http://yoursite.com/2017/10/03/跨域/index.html">
 <meta property="og:site_name" content="Bill&#39;s Blog">
-<meta property="og:description" content="第一步：首先拿到域名的SSL证书，如何拿到SSL证书？可通过腾讯云或者阿里云都能免费申请域名证书。通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。 下面以阿里云为案例获取域名SSL证书： 1.如何通过阿里云申请？详细如下图：在CA证书服务栏目中点击立即购买即可： 2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图： 3.补充好信息之后，提交审">
+<meta property="og:description" content="什么是跨域跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对javascript施加的安全限制。 为什么需要跨域受到浏览器同源策略影响：同源策略阻止从一个域上加载的脚本获取或操作另一个域上的文档属性。也就是说，受到请求的 URL 的域必须与当前 Web 页面的域相同。这意味着浏览器隔离来自不同源的内容，以防止它们之间的操作。这个浏览器策略很旧，从 Netscape">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https01.png">
-<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https02.png">
-<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https03.png">
-<meta property="og:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https04.png">
-<meta property="og:updated_time" content="2017-10-03T15:32:14.627Z">
+<meta property="og:updated_time" content="2017-10-03T15:31:03.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nginx配置https安全域名">
-<meta name="twitter:description" content="第一步：首先拿到域名的SSL证书，如何拿到SSL证书？可通过腾讯云或者阿里云都能免费申请域名证书。通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。 下面以阿里云为案例获取域名SSL证书： 1.如何通过阿里云申请？详细如下图：在CA证书服务栏目中点击立即购买即可： 2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图： 3.补充好信息之后，提交审">
-<meta name="twitter:image" content="http://ocs2ic4ow.bkt.clouddn.com/nginx_https01.png">
+<meta name="twitter:title" content="跨域">
+<meta name="twitter:description" content="什么是跨域跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对javascript施加的安全限制。 为什么需要跨域受到浏览器同源策略影响：同源策略阻止从一个域上加载的脚本获取或操作另一个域上的文档属性。也就是说，受到请求的 URL 的域必须与当前 Web 页面的域相同。这意味着浏览器隔离来自不同源的内容，以防止它们之间的操作。这个浏览器策略很旧，从 Netscape">
 
 
 
@@ -141,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/27/nginx配置https安全域名/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/03/跨域/"/>
 
 
 
 
 
-  <title>nginx配置https安全域名 | Bill's Blog</title>
+  <title>跨域 | Bill's Blog</title>
   
 
 
@@ -284,7 +279,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/27/nginx配置https安全域名/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/跨域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bill">
@@ -301,7 +296,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">nginx配置https安全域名</h1>
+          <h1 class="post-title" itemprop="name headline">跨域</h1>
         
 
         <div class="post-meta">
@@ -313,8 +308,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-27T21:39:46+08:00">
-                2017-09-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T23:06:59+08:00">
+                2017-10-03
               </time>
             
 
@@ -336,8 +331,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/服务器/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -378,15 +373,15 @@
       
 
       
-        <h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p>首先拿到域名的SSL证书，<br>如何拿到SSL证书？<br>可通过腾讯云或者阿里云都能免费申请域名证书。<br>通过腾讯云或者阿里云免费申请域名证书，添加一条TXT的DNS解析记录即可。</p>
-<p>下面以阿里云为案例获取域名SSL证书：</p>
-<h4 id="1-如何通过阿里云申请？详细如下图："><a href="#1-如何通过阿里云申请？详细如下图：" class="headerlink" title="1.如何通过阿里云申请？详细如下图："></a>1.如何通过阿里云申请？详细如下图：</h4><p>在CA证书服务栏目中点击立即购买即可：<br><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https01.png" alt="big img"></p>
-<h4 id="2-点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图："><a href="#2-点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图：" class="headerlink" title="2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图："></a>2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图：</h4><p><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https02.png" alt="big img"></p>
-<h4 id="3-补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据："><a href="#3-补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据：" class="headerlink" title="3.补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据："></a>3.补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据：</h4><p><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https03.png" alt="big img"></p>
-<h4 id="4-通过域名提供商，给域名添加一条DNS解析记录即可："><a href="#4-通过域名提供商，给域名添加一条DNS解析记录即可：" class="headerlink" title="4.通过域名提供商，给域名添加一条DNS解析记录即可："></a>4.通过域名提供商，给域名添加一条DNS解析记录即可：</h4><p><img src="http://ocs2ic4ow.bkt.clouddn.com/nginx_https04.png" alt="big img"></p>
-<h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p>修改nginx配置文件。<br>正常的http 80端口的访问：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen  80;</div><div class="line">    server_name  m.dev.osv.cn;</div><div class="line">    return 301 https://m.dev.osv.cn$request_uri; #将原http直接跳转到https</div><div class="line">    index index.php index.html index.htm;</div><div class="line">    root /data/osv/src/osv-h5/public;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>https 443端口的https访问：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen  443;</div><div class="line">    server_name  m.dev.osv.cn;</div><div class="line">    index index.php index.html index.htm;</div><div class="line">    root /data/osv/src/osv-h5/public;</div><div class="line">    ssl on;</div><div class="line">    ssl_certificate /data/certs/m.dev.osv.cn/1_m.dev.osv.cn_bundle.crt;</div><div class="line">    ssl_certificate_key /data/certs/m.dev.osv.cn/2_m.dev.osv.cn.key;</div><div class="line">    ssl_session_timeout 5m;</div><div class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</div><div class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</div><div class="line">    ssl_prefer_server_ciphers on;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h3><p>配置好nginx站点配置文件之后，./nginx -t检测一下配置文件正确性。<br>之后重启nginx即可生效。</p>
+        <h3 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h3><p>跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对javascript施加的安全限制。</p>
+<h3 id="为什么需要跨域"><a href="#为什么需要跨域" class="headerlink" title="为什么需要跨域"></a>为什么需要跨域</h3><p>受到浏览器同源策略影响：<br>同源策略阻止从一个域上加载的脚本获取或操作另一个域上的文档属性。也就是说，受到请求的 URL 的域必须与当前 Web 页面的域相同。这意味着浏览器隔离来自不同源的内容，以防止它们之间的操作。这个浏览器策略很旧，从 Netscape Navigator 2.0 版本开始就存在。<br>所谓同源是指，域名，协议，端口相同。</p>
+<h3 id="如何跨域"><a href="#如何跨域" class="headerlink" title="如何跨域"></a>如何跨域</h3><h4 id="第一种：通过服务器端设置访问的权限"><a href="#第一种：通过服务器端设置访问的权限" class="headerlink" title="第一种：通过服务器端设置访问的权限"></a>第一种：通过服务器端设置访问的权限</h4><p>1、允许单个域名访问<br>指定某域名（<a href="http://blog.xxx.com）跨域访问，则只需在server.php文件头部添加如下代码：" target="_blank" rel="external">http://blog.xxx.com）跨域访问，则只需在server.php文件头部添加如下代码：</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">header(&apos;Access-Control-Allow-Origin:http://blog.xxx.com&apos;);</div></pre></td></tr></table></figure></p>
+<p>2、允许多个域名访问<br>指定多个域名（<a href="http://blog1.xxx.com、http://blog2.xxx.com等）跨域访问，则只需在server.php文件头部添加如下代码：" target="_blank" rel="external">http://blog1.xxx.com、http://blog2.xxx.com等）跨域访问，则只需在server.php文件头部添加如下代码：</a><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$origin = <span class="keyword">isset</span>($_SERVER[<span class="string">'HTTP_ORIGIN'</span>])? $_SERVER[<span class="string">'HTTP_ORIGIN'</span>] : <span class="string">''</span>;  </div><div class="line">$allow_origin = <span class="keyword">array</span>(  </div><div class="line">    <span class="string">'http://blog1.xxx.com'</span>,  </div><div class="line">    <span class="string">'http://blog2.xxx.com'</span>  </div><div class="line">);  </div><div class="line"><span class="keyword">if</span>(in_array($origin, $allow_origin))&#123;  </div><div class="line">    header(<span class="string">'Access-Control-Allow-Origin:'</span>.$origin);       </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3.允许所有域名访问<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">header(<span class="string">'Access-Control-Allow-Origin:*'</span>);  </div><div class="line"><span class="comment">// 响应类型  </span></div><div class="line">header(<span class="string">'Access-Control-Allow-Methods:POST'</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="第二种：通过配置nginx"><a href="#第二种：通过配置nginx" class="headerlink" title="第二种：通过配置nginx"></a>第二种：通过配置nginx</h4><p>在配置中对应的location下添加上如下的设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">add_header &apos;Access-Control-Allow-Origin&apos; &apos;*&apos;;  </div><div class="line">add_header &apos;Access-Control-Allow-Credentials&apos; &apos;true&apos;;</div><div class="line">add_header &apos;Access-Control-Allow-Methods&apos; &apos;GET, POST, OPTIONS&apos;;</div></pre></td></tr></table></figure></p>
+<h4 id="第三种：通过JSONP"><a href="#第三种：通过JSONP" class="headerlink" title="第三种：通过JSONP"></a>第三种：通过JSONP</h4><p>要注意JSONP只支持GET请求，不支持POST请求。</p>
+<p>具体实例：<br>前端处理：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    $.ajax(&#123;</div><div class="line">        type : <span class="string">"GET"</span>,</div><div class="line">        url : <span class="string">"http://172.22.22.120/new/ajax_jsonp.php"</span>,</div><div class="line">        dataType : <span class="string">"jsonp"</span>,    <span class="comment">// 数据格式指定为jsonp</span></div><div class="line">        jsonp: <span class="string">"callback"</span>,     <span class="comment">// 服务点通过这个键值获取回调方法</span></div><div class="line">        jsonpCallback:<span class="string">"cb"</span>,   <span class="comment">// 指定回调方法</span></div><div class="line">        success : <span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>&#123;</div><div class="line"></div><div class="line">        &#125;,</div><div class="line">    &#125;);  </div><div class="line"></div><div class="line">    <span class="comment">// 回调方法</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">cb</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">        alert(data.website);</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p>后端处理：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">    $cb = htmlspecialchars($_GET[<span class="string">'callback'</span>]);  <span class="comment">// 注意了，这里要做好过滤，防止xss攻击</span></div><div class="line">    <span class="keyword">echo</span> $cb,<span class="string">'('</span>,json_encode(<span class="keyword">array</span>(<span class="string">'website'</span>=&gt;<span class="string">'hcoding'</span>)),<span class="string">')'</span>;  <span class="comment">// 返回客户端的数据,这是一段js代码</span></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -433,7 +428,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
           
             <a href="/tags/Nginx/" rel="tag"># Nginx</a>
           
@@ -448,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/26/nginx日志统计分析/" rel="next" title="nginx日志统计分析">
-                <i class="fa fa-chevron-left"></i> nginx日志统计分析
+              <a href="/2017/10/02/Jquery-常用知识点/" rel="next" title="Jquery 常用知识点">
+                <i class="fa fa-chevron-left"></i> Jquery 常用知识点
               </a>
             
           </div>
@@ -457,10 +454,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/02/Jquery-each/" rel="prev" title="Jquery each">
-                Jquery each <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -623,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步："><span class="nav-number">1.</span> <span class="nav-text">第一步：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如何通过阿里云申请？详细如下图："><span class="nav-number">1.1.</span> <span class="nav-text">1.如何通过阿里云申请？详细如下图：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图："><span class="nav-number">1.2.</span> <span class="nav-text">2.点击购买之后，在CA证书的列表中，点击刚才的那条申请，补充好信息，具体如下图：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据："><span class="nav-number">1.3.</span> <span class="nav-text">3.补充好信息之后，提交审核的时候，在CA证书的列表，点击进度，会看到DNS的相关解析数据：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-通过域名提供商，给域名添加一条DNS解析记录即可："><span class="nav-number">1.4.</span> <span class="nav-text">4.通过域名提供商，给域名添加一条DNS解析记录即可：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步："><span class="nav-number">2.</span> <span class="nav-text">第二步：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步："><span class="nav-number">3.</span> <span class="nav-text">第三步：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是跨域"><span class="nav-number">1.</span> <span class="nav-text">什么是跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要跨域"><span class="nav-number">2.</span> <span class="nav-text">为什么需要跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何跨域"><span class="nav-number">3.</span> <span class="nav-text">如何跨域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一种：通过服务器端设置访问的权限"><span class="nav-number">3.1.</span> <span class="nav-text">第一种：通过服务器端设置访问的权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二种：通过配置nginx"><span class="nav-number">3.2.</span> <span class="nav-text">第二种：通过配置nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三种：通过JSONP"><span class="nav-number">3.3.</span> <span class="nav-text">第三种：通过JSONP</span></a></li></ol></li></ol></div>
             
 
           </div>
